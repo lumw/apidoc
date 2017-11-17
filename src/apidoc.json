@@ -1,0 +1,22 @@
+{
+	"name": "Poseidon API",
+	"version": "1.0.0",
+	"description": "",
+	"title": "Poseidon API",
+	"order":[
+	"CreateUser",
+	"UpdateUser",
+	"RetrieveUser",
+	"RetrieveWealthLeaderBoard",
+	"RetrieveCharmLeaderBoard",
+	"RetrieveDonateLeaderBoard",
+	"RetrieveUFOCatcher",
+	"RetrieveUFOCatcherbyId",
+	"CreateOperation"
+	],
+	"template":{
+		"withCompare": true,
+		"withGenerator": true
+	}
+
+}
