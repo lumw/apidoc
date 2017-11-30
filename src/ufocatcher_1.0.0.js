@@ -3,33 +3,94 @@
  */
 
  /**
-  * @apidefine response_ufocatcher
-  * @apiSuccess {Object[]} ufocatcher
-  * @apiSuccess {Number} ufocatcher.ufocatcherId the unique identifer of a ufoCatcher
-  * @apiSuccess {Number} ufocatcher.dollTypeId the type Id of the doll that inside the ufoCatcher
-  * @apiSuccess {Number} ufocatcher.status  status of ufoCatcher
+  * @apidefine response_AllOnlineUfoCatcher
+  * @apiSuccess {Object[]} ufoCatcher
+  * @apiSuccess {String} ufocatcher.ufoCatcherid the unique identifer of a ufoCatcher
+  * @apiSuccess {Number} ufocatcher.dollId 娃娃机内娃娃编号
+  * @apiSuccess {Number} ufocatcher.dollPicUrl     娃娃图片URL
+  * @apiSuccess {String} ufocatcher.lastLoginDtTm  娃娃机上次登录时间
+  * @apiSuccess {Number} ufocatcher.catcherStatus  娃娃机状态
+  * @apiSuccess {Number} ufocatcher.gameDiffLevel  该娃娃机游戏难度等级
+  * @apiSuccess {Number} ufocatcher.gameScore  娃娃机每局游戏成功后获取积分
+  * @apiSuccess {Number} ufocatcher.gameCurcny 娃娃机每局游戏消耗游戏币
+  *
+  * @apiError {String} reasonCode
+  */
+
+/**
+ * @apidefine response_OnlineUfoCatcherById
+ * @apiSuccess {Object} ufoCatcher
+ * @apiSuccess {String} ufocatcher.ufoCatcherid the unique identifer of a ufoCatcher
+ * @apiSuccess {Number} ufocatcher.dollId 娃娃机内娃娃编号
+ * @apiSuccess {Number} ufocatcher.dollPicUrl     娃娃图片URL
+ * @apiSuccess {String} ufocatcher.lastLoginDtTm  娃娃机上次登录时间
+ * @apiSuccess {Number} ufocatcher.catcherStatus  娃娃机状态
+ * @apiSuccess {Number} ufocatcher.gameDiffLevel  该娃娃机游戏难度等级
+ * @apiSuccess {Number} ufocatcher.gameScore  娃娃机每局游戏成功后获取积分
+ * @apiSuccess {Number} ufocatcher.gameCurcny 娃娃机每局游戏消耗游戏币
+ *
+ * @apiError {String} reasonCode
+ */
+
+ /**
+  * @apidefine response_ufocatcherStatus
+  * @apiSuccess {Object} ufoCatcherStatus
+  * @apiSuccess {String} ufoCatcherStatus.ufoCatcherid the unique identifer of a ufoCatcher
+  * @apiSuccess {Number} ufoCatcherStatus.catcherStatus  娃娃机状态
   *
   * @apiError {String} reasonCode
   */
 
  /**
-  * @api {get} /poseidon/ufocatcher Retrieve All ufoCatcher information
-  * @apiName RetrieveUFOCatcher
+  * @apidefine response_allUfocatcherStatus
+  * @apiSuccess {Object[]} ufoCatcherStatus
+  * @apiSuccess {String} ufoCatcherStatus.ufoCatcherid   the unique identifer of a ufoCatcher
+  * @apiSuccess {Number} ufoCatcherStatus.catcherStatus  娃娃机状态
+  *
+  * @apiError {String} reasonCode
+  */
+
+
+ /**
+  * @api {get} /poseidon/ufocatcher Retrieve All Online UFOCatcher
+  * @apiName RetrieveAllOnlineUFOCatcher
   * @apiVersion 1.0.0
   * @apiGroup Group_UFOCatcher
   *
   * @apiuse HeaderParameters
   * 
-  * @apiuse response_ufocatcher
+  * @apiuse response_AllOnlineUfoCatcher
   */
 
+/**
+ * @api {get} /poseidon/ufocatcher/status Retrieve All Online UFOCatcher Status
+ * @apiName RetrieveAllOnlineUFOCatcherStatus
+ * @apiVersion 1.0.0
+ * @apiGroup Group_UFOCatcher
+ *
+ * @apiuse HeaderParameters
+ *
+ * @apiuse response_allUfocatcherStatus
+ */
+
  /**
-  * @api {get} /poseidon/ufocatcher/:ufocatcherId Retrieve ufoCatcher by Id
-  * @apiName RetrieveUFOCatcherbyId
+  * @api {get} /poseidon/ufocatcher/:ufocatcherId Retrieve Online UFOCatcher By ufoCatcherId
+  * @apiName RetrieveAllOnlineUFOCatcherById
   * @apiVersion 1.0.0
   * @apiGroup Group_UFOCatcher
   *
   * @apiuse HeaderParameters
   *
-  * @apiuse response_ufocatcher
+  * @apiuse response_OnlineUfoCatcherById
   */
+
+/**
+ * @api {get} /poseidon/ufocatcher/status/:ufoCatcherId Retrieve Online UFOCatcher Status By ufoCatcherId
+ * @apiName RetrieveOnlineUFOCatcherStatusById
+ * @apiVersion 1.0.0
+ * @apiGroup Group_UFOCatcher
+ *
+ * @apiuse HeaderParameters
+ *
+ * @apiuse response_ufocatcherStatus
+ */
