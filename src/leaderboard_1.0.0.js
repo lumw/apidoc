@@ -4,16 +4,18 @@
 
 /**
  * @apidefine LeaderBoard
- * @apiParam {String="W", "MO", "HI"} period the period of leaderboard. W=Week, MO=Month, HI=History
+ * @apiParam {String="D" "W", "MO", "HI"} period the period of leaderboard. D=Daily W=Weekly, MO=Monthly, HI=History
  * @apiParam {Number} limit the maximum number of records that can be retrieved
  */
 
  /**
   * @apidefine response_LeaderBoard
   * @apiSuccess {Object[]} leaderboard
-  * @apiSuccess {Number} leaderboard.userId the unique identifer of a user
-  * @apiSuccess {String} leaderboard.nickName
-  * @apiSuccess {Number} leaderboard.score
+  * @apiSuccess {String} leaderboard.period period the period of leaderboard. D=Daily W=Weekly, MO=Monthly, HI=History
+  * @apiSuccess {Object[]} leaderboard.boards
+  * @apiSuccess {Number} leaderboard.boards.userId the unique identifer of a user
+  * @apiSuccess {String} leaderboard.boards.nickName
+  * @apiSuccess {Number} leaderboard.boards.score
   *
   * @apiError {String} reasonCode
   */
