@@ -14,7 +14,8 @@
   * @apiSuccess {String} leaderboard.period period the period of leaderboard. D=Daily W=Weekly, MO=Monthly, HI=History
   * @apiSuccess {Object[]} leaderboard.boards
   * @apiSuccess {Number} leaderboard.boards.userId the unique identifer of a user
-  * @apiSuccess {String} leaderboard.boards.nickName
+  * @apiSuccess {String} leaderboard.boards.nickName 微信昵称
+  * @apiSuccess {String} leaderboard.boards.wechatHeadImgUrl 微信头像
   * @apiSuccess {Number} leaderboard.boards.score
   *
   * @apiError {String} reasonCode

@@ -24,8 +24,9 @@
  * @apiSuccess {Object} user
  * @apiSuccess {Number} user.userId 用户唯一标识
  * @apiSuccess {String} [user.userName] 用户名
- * @apiSuccess {Number} [user.nickName] 昵称
  * @apiSuccess {String} user.wechatId 微信ID
+ * @apiSuccess {Number} [user.wechatkName] 微信昵称
+ * @apiSuccess {String} user.wechatHeadImgUrl 微信头像url
  * @apiSuccess {String} [user.gender] 性别 0-女 1-男
  * @apiSuccess {Number} [user.birthday] yyyy/MM/dd
  * @apiSuccess {Number} [user.email]
@@ -33,7 +34,7 @@
  * @apiSuccess {Number} [user.address]
  * @apiSuccess {String} [user.province]
  * @apiSuccess {String} [user.city]
- * @apiSuccess {Number} user.recCreateAppro 用户创建方式  默认 0-微信
+ * @apiSuccess {Number} user.recCreateAppro 用户创建方式  默认 1-微信
  * @apiSuccess {Object} account[]
  * @apiSuccess {Number} account.accountId
  * @apiSuccess {String} account.accountType 1-游戏币账户 2-积分账户
@@ -50,8 +51,9 @@
  * @apiSuccess {Object} user
  * @apiSuccess {Number} user.userId 用户唯一标识
  * @apiSuccess {String} [user.userName] 用户名
- * @apiSuccess {Number} [user.nickName] 昵称
  * @apiSuccess {String} user.wechatId 微信ID
+ * @apiSuccess {Number} [user.wechatkName] 微信昵称
+ * @apiSuccess {String} user.wechatHeadImgUrl 微信头像url
  * @apiSuccess {String} [user.gender] 性别 0-女 1-男
  * @apiSuccess {Number} [user.birthday] yyyy/MM/dd
  * @apiSuccess {Number} [user.email]
@@ -59,7 +61,7 @@
  * @apiSuccess {Number} [user.address]
  * @apiSuccess {String} [user.province]
  * @apiSuccess {String} [user.city]
- * @apiSuccess {Number} user.recCreateAppro 用户创建方式 默认 0-微信
+ * @apiSuccess {Number} user.recCreateAppro 用户创建方式 默认 1-微信
  * @apiSuccess {Object} account[]
  * @apiSuccess {Number} account.accountId
  * @apiSuccess {String} account.accountType 1-游戏币账户 2-积分账户
@@ -73,8 +75,12 @@
 /**
  * @apidefine request_User_Login
  * @apiparam {Object} userLogin
- * @apiParam {String} userLogin.wechatId 微信ID
- * @apiParam {Number} userLogin.recCreateAppro 用户创建方式  默认 0-微信
+ * @apiParam {String} userLogin.loginChannel 用户注册渠道  1-微信
+ * @apiParam {Object} userLogin.wechatLogin
+ * @apiParam {String} userLogin.wechatLogin.wechatId
+ * @apiParam {String} userLogin.wechatLogin.wechatName
+ * @apiParam {Number} userLogin.wechatLogin.gender
+ * @apiParam {String} userLogin.wechatLogin.wechatHeadImgUrl
  */
 
 
