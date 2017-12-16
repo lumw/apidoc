@@ -13,6 +13,8 @@
   * @apiSuccess {Number} ufocatcher.gameDiffLevel  该娃娃机游戏难度等级
   * @apiSuccess {Number} ufocatcher.gameScore  娃娃机每局游戏成功后获取积分
   * @apiSuccess {Number} ufocatcher.gameCurcny 娃娃机每局游戏消耗游戏币
+  * @apiSuccess {String} ufocatcher.frontCameraUrl 正面摄像头直播地址
+  * @apiSuccess {String} ufocatcher.lateralCameraUrl 侧面摄像头直播地址
   *
   * @apiError {String} reasonCode
   */
@@ -28,6 +30,8 @@
  * @apiSuccess {Number} ufocatcher.gameDiffLevel  该娃娃机游戏难度等级
  * @apiSuccess {Number} ufocatcher.gameScore  娃娃机每局游戏成功后获取积分
  * @apiSuccess {Number} ufocatcher.gameCurcny 娃娃机每局游戏消耗游戏币
+ * @apiSuccess {String} ufocatcher.frontCameraUrl 正面摄像头直播地址
+ * @apiSuccess {String} ufocatcher.lateralCameraUrl 侧面摄像头直播地址
  *
  * @apiError {String} reasonCode
  */
