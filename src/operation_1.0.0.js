@@ -33,3 +33,36 @@
   * @apiuse response_Operation
   */
 
+
+/**
+ * @apidefine retrieveResult_request
+ * @apiParam  {Number} userId 用户唯一标识
+ * @apiParam {String} operationId 每局游戏唯一标识
+ */
+
+/**
+ * @apidefine retrieveResult_response
+ * @apiSuccess {Object} gameResult
+ * @apiSuccess {String} gameResult.operationId 每局游戏唯一标识
+ * @apiSuccess {String} gameResult.userId 用户唯一标识
+ * @apiSuccess {String} gameResult.accountId 账户唯一标识
+ * @apiSuccess {String} gameResult.ufoCatcherid 娃娃机编号
+ * @apiSuccess {String} gameResult.gameRsult 游戏结果 0-失败 1-成功
+ * @apiSuccess {String} gameResult.eardedScore 获取到的积分
+ * @apiSuccess {String} gameResult.lostedCorcy 消耗的游戏币
+ *
+ * @apiError {String} reasonCode
+ */
+
+/**
+ * @api {get} /poseidon/operation/result?jsondata={...} Retrieve the result of game
+ * @apiName RetrieveGameResult
+ * @apiVersion 1.0.0
+ * @apiGroup Group_Operation
+ *
+ * @apiuse HeaderParameters
+ *
+ * @apiuse retrieveResult_request
+ *
+ * @apiuse retrieveResult_response
+ */
