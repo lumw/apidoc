@@ -44,18 +44,20 @@
  * @apidefine retrieveResult_response
  * @apiSuccess {Object} gameResult
  * @apiSuccess {String} gameResult.operationId 每局游戏唯一标识
- * @apiSuccess {String} gameResult.userId 用户唯一标识
- * @apiSuccess {String} gameResult.accountId 账户唯一标识
+ * @apiSuccess {int} gameResult.userId 用户唯一标识
+ * @apiSuccess {int} gameResult.accountId 账户唯一标识
  * @apiSuccess {String} gameResult.ufoCatcherid 娃娃机编号
- * @apiSuccess {String} gameResult.gameRsult 游戏结果 0-失败 1-成功
- * @apiSuccess {String} gameResult.eardedScore 获取到的积分
- * @apiSuccess {String} gameResult.lostedCorcy 消耗的游戏币
+ * @apiSuccess {int} gameResult.gameRsult 游戏结果 0-失败 1-成功
+ * @apiSuccess {int} gameResult.eardedScore 获取到的积分
+ * @apiSuccess {int} gameResult.lostedCorcy 消耗的游戏币
+ * @apiSuccess {String} gameResult.startDtTm 游戏开始时间 yyyy/MM/dd hh:mm:ss
+ * @apiSuccess {String} gameResult.endDtTm 游戏结束时间 yyyy/MM/dd hh:mm:ss
  *
  * @apiError {String} reasonCode
  */
 
 /**
- * @api {get} /poseidon/operation/result?jsondata={...} Retrieve the result of game
+ * @api {get} /poseidon/operation/result?jsondata={...} Retrieve Game Result
  * @apiName RetrieveGameResult
  * @apiVersion 1.0.0
  * @apiGroup Group_Operation
