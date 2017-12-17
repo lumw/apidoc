@@ -79,7 +79,7 @@
  * @apiSuccess {Number} tradeScore.prevScore 积分变动之前的数值
  * @apiSuccess {Number} tradeScore.currScore 积分变动之后的数值
  * @apiSuccess {Number} tradeScore.quantity 变动的数值
- * @apiSuccess {{String="Login" "Exchange", "Catch_Reward", "Invitation_Reward"}} tradeScore.changeReson 积分变动原因
+ * @apiSuccess {String="Login" "Exchange", "Catch_Reward", "Invitation_Reward"} tradeScore.changeReson 积分变动原因 Login:登陆奖励 Exchange:积分兑换 Catch_Reward:抓中娃娃奖励 Invitation_Reward:邀请奖励
  * @apiSuccess {String} tradeScore.recCreatDtTm 积分变动时间
  *
  * @apiError {String} reasonCode
