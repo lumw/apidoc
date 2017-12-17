@@ -49,7 +49,7 @@
  * @apiSuccess {String} gameResult.ufoCatcherid 娃娃机编号
  * @apiSuccess {int} gameResult.gameRsult 游戏结果 0-失败 1-成功
  * @apiSuccess {int} gameResult.eardedScore 获取到的积分
- * @apiSuccess {int} gameResult.lostedCorcy 消耗的游戏币
+ * @apiSuccess {int} gameResult.lostedCurcy 消耗的游戏币
  * @apiSuccess {String} gameResult.startDtTm 游戏开始时间 yyyy/MM/dd hh:mm:ss
  * @apiSuccess {String} gameResult.endDtTm 游戏结束时间 yyyy/MM/dd hh:mm:ss
  *

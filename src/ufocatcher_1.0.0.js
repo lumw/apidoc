@@ -6,8 +6,6 @@
   * @apidefine response_AllOnlineUfoCatcher
   * @apiSuccess {Object[]} ufoCatcher
   * @apiSuccess {String} ufocatcher.ufoCatcherid the unique identifer of a ufoCatcher
-  * @apiSuccess {Number} ufocatcher.dollId 娃娃机内娃娃编号
-  * @apiSuccess {Number} ufocatcher.dollPicUrl     娃娃图片URL
   * @apiSuccess {String} ufocatcher.lastLoginDtTm  娃娃机上次登录时间
   * @apiSuccess {Number} ufocatcher.catcherStatus  娃娃机状态
   * @apiSuccess {Number} ufocatcher.gameDiffLevel  该娃娃机游戏难度等级
@@ -15,6 +13,10 @@
   * @apiSuccess {Number} ufocatcher.gameCurcny 娃娃机每局游戏消耗游戏币
   * @apiSuccess {String} ufocatcher.frontCameraUrl 正面摄像头直播地址
   * @apiSuccess {String} ufocatcher.lateralCameraUrl 侧面摄像头直播地址
+  * @apiSuccess {Object} ufocatcher.doll
+  * @apiSuccess {Number} ufocatcher.doll.dollId 娃娃ID
+  * @apiSuccess {String} ufocatcher.doll.dollName 娃娃名称
+  * @apiSuccess {String} ufocatcher.doll.dollImgUrl 娃娃图片url
   *
   * @apiError {String} reasonCode
   */
@@ -23,8 +25,6 @@
  * @apidefine response_OnlineUfoCatcherById
  * @apiSuccess {Object} ufoCatcher
  * @apiSuccess {String} ufocatcher.ufoCatcherid the unique identifer of a ufoCatcher
- * @apiSuccess {Number} ufocatcher.dollId 娃娃机内娃娃编号
- * @apiSuccess {Number} ufocatcher.dollPicUrl     娃娃图片URL
  * @apiSuccess {String} ufocatcher.lastLoginDtTm  娃娃机上次登录时间
  * @apiSuccess {Number} ufocatcher.catcherStatus  娃娃机状态
  * @apiSuccess {Number} ufocatcher.gameDiffLevel  该娃娃机游戏难度等级
@@ -32,6 +32,10 @@
  * @apiSuccess {Number} ufocatcher.gameCurcny 娃娃机每局游戏消耗游戏币
  * @apiSuccess {String} ufocatcher.frontCameraUrl 正面摄像头直播地址
  * @apiSuccess {String} ufocatcher.lateralCameraUrl 侧面摄像头直播地址
+ * @apiSuccess {Object} ufocatcher.doll
+ * @apiSuccess {Number} ufocatcher.doll.dollId 娃娃ID
+ * @apiSuccess {String} ufocatcher.doll.dollName 娃娃名称
+ * @apiSuccess {String} ufocatcher.doll.dollImgUrl 娃娃图片url
  *
  * @apiError {String} reasonCode
  */
