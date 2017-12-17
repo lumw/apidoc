@@ -73,6 +73,22 @@
  */
 
 /**
+ * @apidefine response_Retrieve_User_Score_Record
+ * @apiSuccess {Object[]} tradeScore
+ * @apiSuccess {Number} tradeScore.tradeId 记录id
+ * @apiSuccess {Number} tradeScore.userId 用户唯一标识
+ * @apiSuccess {Number} tradeScore.accountId 账户唯一标识
+ * @apiSuccess {Number} tradeScore.prevScore 积分变动之前的数值
+ * @apiSuccess {Number} tradeScore.currScore 积分变动之后的数值
+ * @apiSuccess {Number} tradeScore.quantity 变动的数值
+ * @apiSuccess {String} tradeScore.changeReson 积分变动原因
+ * @apiSuccess {String} tradeScore.recCreatDtTm 积分变动时间
+ *
+ * @apiError {String} reasonCode
+ */
+
+
+/**
  * @apidefine request_User_Login
  * @apiparam {Object} userLogin
  * @apiParam {String} userLogin.loginChannel 用户注册渠道  1-微信
@@ -133,4 +149,16 @@
  * @apiuse request_User_Login
  *
  * @apiuse response_Create_User
+ */
+
+/**
+ * @api {get} /poseidon/user/score/:userId Retrieve User Score Record
+ * @apiName RetrieveUserScoreRecord
+ * @apiVersion 1.0.0
+ * @apiGroup Group_User
+ *
+ * @apiuse HeaderParameters
+ * @apiuse UrlParameter_UserId
+ *
+ * @apiuse response_Retrieve_User_Score_Record
  */
