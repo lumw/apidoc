@@ -76,12 +76,10 @@
  * @apidefine response_Retrieve_User_Score_Record
  * @apiSuccess {Object[]} tradeScore
  * @apiSuccess {Number} tradeScore.tradeId 记录id
- * @apiSuccess {Number} tradeScore.userId 用户唯一标识
- * @apiSuccess {Number} tradeScore.accountId 账户唯一标识
  * @apiSuccess {Number} tradeScore.prevScore 积分变动之前的数值
  * @apiSuccess {Number} tradeScore.currScore 积分变动之后的数值
  * @apiSuccess {Number} tradeScore.quantity 变动的数值
- * @apiSuccess {String} tradeScore.changeReson 积分变动原因
+ * @apiSuccess {{String="Login" "Exchange", "Catch_Reward", "Invitation_Reward"}} tradeScore.changeReson 积分变动原因
  * @apiSuccess {String} tradeScore.recCreatDtTm 积分变动时间
  *
  * @apiError {String} reasonCode
