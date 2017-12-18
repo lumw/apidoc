@@ -124,6 +124,27 @@
  * @apiParam {String} userLogin.wechatLogin.wechatHeadImgUrl
  */
 
+/**
+ * @apidefine request_User_Exchange
+ * @apiparam {Object} exchange
+ * @apiParam {Number} exchange.userId 用户ID
+ * @apiParam {Number} exchange.exchangeType 兑换类型 目前默认1
+ * @apiParam {Number} exchange.score 积分数量
+ * @apiParam {Number} exchange.currency 游戏币数量
+ */
+
+/**
+ * @apidefine response_User_Exchange
+ * @apiSuccess {Object} account[]
+ * @apiSuccess {Number} account.accountId 账户ID
+ * @apiSuccess {String} account.accountType 1-游戏币账户 2-积分账户
+ * @apiSuccess {String} account.userId 用户ID
+ * @apiSuccess {Number} account.balance 余额
+ * @apiSuccess {Number} account.status 状态
+ *
+ * @apiError {String} errorCode
+ */
+
 
  /**
   * @api {post} /poseidon/user/ Create User
@@ -198,4 +219,16 @@
  * @apiuse UrlParameter_UserId
  *
  * @apiuse response_Retrieve_User_Currency_Record
+ */
+
+/**
+ * @api {post} /poseidon/user/exchange Exchange
+ * @apiName Exchange
+ * @apiVersion 1.0.0
+ * @apiGroup Group_User
+ *
+ * @apiuse HeaderParameters
+ * @apiuse request_User_Exchange
+ *
+ * @apiuse response_User_Exchange
  */
