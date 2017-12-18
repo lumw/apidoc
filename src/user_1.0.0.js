@@ -74,6 +74,7 @@
 
 /**
  * @apidefine response_Retrieve_User_Score_Record
+ * @apiSuccess {Number} score 当前积分值
  * @apiSuccess {Object[]} tradeScore
  * @apiSuccess {Number} tradeScore.tradeId 记录id
  * @apiSuccess {Number} tradeScore.prevScore 积分变动之前的数值
