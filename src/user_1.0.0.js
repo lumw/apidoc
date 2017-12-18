@@ -94,22 +94,14 @@
 
 /**
  * @apidefine response_Retrieve_User_Currency_Record
- * @apiSuccess {Number} currScore 当前游戏币
- * @apiSuccess {Object[]} tradeCurrencyIncresse 增长的游戏币记录
- * @apiSuccess {Number} tradeCurrencyIncresse.tradeId 记录id
- * @apiSuccess {Number} tradeCurrencyIncresse.prevScore 游戏币变动之前的数值
- * @apiSuccess {Number} tradeCurrencyIncresse.currScore 游戏币变动之后的数值
- * @apiSuccess {Number} tradeCurrencyIncresse.quantity 变动的数值
- * @apiSuccess {String="PlayGame" "Exchange_By_Score", "Charge", "Reward"} tradeCurrencyIncresse.changeReson 游戏币变动原因 PlayGame:游戏扣除 Exchange_By_Score:积分兑换 Charge:充值 Reward:奖励
- * @apiSuccess {String} tradeCurrencyIncresse.recCreatDtTm 游戏币变动时间
- * @apiSuccess {Object[]} tradeCurrencyDeduct 减少的游戏币记录
- * @apiSuccess {Number} tradeCurrencyDeduct.tradeId 记录id
- * @apiSuccess {Number} tradeCurrencyDeduct.prevScore 游戏币变动之前的数值
- * @apiSuccess {Number} tradeCurrencyDeduct.currScore 游戏币变动之后的数值
- * @apiSuccess {Number} tradeCurrencyDeduct.quantity 变动的数值
- * @apiSuccess {String="PlayGame" "Exchange_By_Score", "Charge", "Reward"} tradeCurrencyDeduct.changeReson 游戏币变动原因 PlayGame:游戏扣除 Exchange_By_Score:积分兑换 Charge:充值 Reward:奖励
- * @apiSuccess {String} tradeCurrencyDeduct.recCreatDtTm 游戏币变动时间
- * @apiError {String} errorCode
+ * @apiSuccess {Number} currCurrency 当前游戏币
+ * @apiSuccess {Object[]} tradeCurrency 增长的游戏币记录
+ * @apiSuccess {Number} tradeCurrency.tradeId 记录id
+ * @apiSuccess {Number} tradeCurrency.prevScore 游戏币变动之前的数值
+ * @apiSuccess {Number} tradeCurrency.currScore 游戏币变动之后的数值
+ * @apiSuccess {Number} tradeCurrency.quantity 变动的数值
+ * @apiSuccess {String="PlayGame" "Exchange_By_Score", "Charge", "Reward"} tradeCurrency.changeReson 游戏币变动原因 PlayGame:游戏扣除 Exchange_By_Score:积分兑换 Charge:充值 Reward:奖励
+ * @apiSuccess {String} tradeCurrency.recCreatDtTm 游戏币变动时间
  */
 
 
