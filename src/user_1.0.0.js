@@ -42,7 +42,7 @@
  * @apiSuccess {Number} account.balance
  * @apiSuccess {Number} account.status
  *
- * @apiError {String} reasonCode
+ * @apiError {String} errorCode
  */
 
 
@@ -69,21 +69,47 @@
  * @apiSuccess {Number} account.balance
  * @apiSuccess {Number} account.status
  *
- * @apiError {String} reasonCode
+ * @apiError {String} errorCode
  */
 
 /**
  * @apidefine response_Retrieve_User_Score_Record
- * @apiSuccess {Number} score 当前积分值
- * @apiSuccess {Object[]} tradeScore
- * @apiSuccess {Number} tradeScore.tradeId 记录id
- * @apiSuccess {Number} tradeScore.prevScore 积分变动之前的数值
- * @apiSuccess {Number} tradeScore.currScore 积分变动之后的数值
- * @apiSuccess {Number} tradeScore.quantity 变动的数值
- * @apiSuccess {String="Login" "Exchange", "Catch_Reward", "Invitation_Reward"} tradeScore.changeReson 积分变动原因 Login:登陆奖励 Exchange:积分兑换 Catch_Reward:抓中娃娃奖励 Invitation_Reward:邀请奖励
- * @apiSuccess {String} tradeScore.recCreatDtTm 积分变动时间
- *
- * @apiError {String} reasonCode
+ * @apiSuccess {Number} currScore 当前积分值
+ * @apiSuccess {Object[]} tradeScoreIncresse 增长的积分记录
+ * @apiSuccess {Number} tradeScoreIncresse.tradeId 记录id
+ * @apiSuccess {Number} tradeScoreIncresse.prevScore 积分变动之前的数值
+ * @apiSuccess {Number} tradeScoreIncresse.currScore 积分变动之后的数值
+ * @apiSuccess {Number} tradeScoreIncresse.quantity 变动的数值
+ * @apiSuccess {String="Login" "Exchange", "Catch_Reward", "Invitation_Reward"} tradeScoreIncresse.changeReson 积分变动原因 Login:登陆奖励 Exchange:积分兑换 Catch_Reward:抓中娃娃奖励 Invitation_Reward:邀请奖励
+ * @apiSuccess {String} tradeScoreIncresse.recCreatDtTm 积分变动时间
+ * @apiSuccess {Object[]} tradeScoreDeduct 减少的积分记录
+ * @apiSuccess {Number} tradeScoreDeduct.tradeId 记录id
+ * @apiSuccess {Number} tradeScoreDeduct.prevScore 积分变动之前的数值
+ * @apiSuccess {Number} tradeScoreDeduct.currScore 积分变动之后的数值
+ * @apiSuccess {Number} tradeScoreDeduct.quantity 变动的数值
+ * @apiSuccess {String="Login" "Exchange", "Catch_Reward", "Invitation_Reward"} tradeScoreDeduct.changeReson 积分变动原因 Login:登陆奖励 Exchange:积分兑换 Catch_Reward:抓中娃娃奖励 Invitation_Reward:邀请奖励
+ * @apiSuccess {String} tradeScoreDeduct.recCreatDtTm 积分变动时间
+ * @apiError {String} errorCode
+ */
+
+/**
+ * @apidefine response_Retrieve_User_Currency_Record
+ * @apiSuccess {Number} currScore 当前游戏币
+ * @apiSuccess {Object[]} tradeCurrencyIncresse 增长的游戏币记录
+ * @apiSuccess {Number} tradeCurrencyIncresse.tradeId 记录id
+ * @apiSuccess {Number} tradeCurrencyIncresse.prevScore 游戏币变动之前的数值
+ * @apiSuccess {Number} tradeCurrencyIncresse.currScore 游戏币变动之后的数值
+ * @apiSuccess {Number} tradeCurrencyIncresse.quantity 变动的数值
+ * @apiSuccess {String="PlayGame" "Exchange_By_Score", "Charge", "Reward"} tradeCurrencyIncresse.changeReson 游戏币变动原因 PlayGame:游戏扣除 Exchange_By_Score:积分兑换 Charge:充值 Reward:奖励
+ * @apiSuccess {String} tradeCurrencyIncresse.recCreatDtTm 游戏币变动时间
+ * @apiSuccess {Object[]} tradeCurrencyDeduct 减少的游戏币记录
+ * @apiSuccess {Number} tradeCurrencyDeduct.tradeId 记录id
+ * @apiSuccess {Number} tradeCurrencyDeduct.prevScore 游戏币变动之前的数值
+ * @apiSuccess {Number} tradeCurrencyDeduct.currScore 游戏币变动之后的数值
+ * @apiSuccess {Number} tradeCurrencyDeduct.quantity 变动的数值
+ * @apiSuccess {String="PlayGame" "Exchange_By_Score", "Charge", "Reward"} tradeCurrencyDeduct.changeReson 游戏币变动原因 PlayGame:游戏扣除 Exchange_By_Score:积分兑换 Charge:充值 Reward:奖励
+ * @apiSuccess {String} tradeCurrencyDeduct.recCreatDtTm 游戏币变动时间
+ * @apiError {String} errorCode
  */
 
 
@@ -160,4 +186,16 @@
  * @apiuse UrlParameter_UserId
  *
  * @apiuse response_Retrieve_User_Score_Record
+ */
+
+/**
+ * @api {get} /poseidon/user/currency/:userId Retrieve User Currency Record
+ * @apiName RetrieveUserCurrencyRecord
+ * @apiVersion 1.0.0
+ * @apiGroup Group_User
+ *
+ * @apiuse HeaderParameters
+ * @apiuse UrlParameter_UserId
+ *
+ * @apiuse response_Retrieve_User_Currency_Record
  */
