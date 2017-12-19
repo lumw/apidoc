@@ -9,8 +9,20 @@
  * @apiParam {Number} operation.accountId the unique identifer of a user's account
  * @apiParam {String} operation.ufoCatcherId the unique identifer of a ufoCatcher
  * @apiParam {String} operation.actionCode 开始游戏 0001, 向南移动 0002, 向北移动 0003, 向西移动 0004, 向东移动 0005, 抓取娃娃 0006
- * @apiParam {String} operation.create_dt_tm the operation create time 
+ * @apiParam {String} operation.create_dt_tm the operation create time
+ */
 
+/**
+ * @apidefine quit_game_request
+ * @apiparam {Object} quitGame
+ * @apiParam {Number} quitGame.userId the unique identifer of a user
+ * @apiParam {String} quitGame.ufoCatcherId the unique identifer of a ufoCatcher
+ */
+
+/**
+ * @apidefine quit_game_response
+ *
+ * @apiError {String} reasonCode
  */
 
  /**
@@ -19,20 +31,6 @@
   *
   * @apiError {String} reasonCode
   */
-
-  /**
-  * @api {post} /poseidon/operation/ Create Operation
-  * @apiName CreateOperation
-  * @apiVersion 1.0.0
-  * @apiGroup Group_Operation
-  *
-  * @apiuse HeaderParameters
-  *
-  * @apiuse request_Operation
-  *
-  * @apiuse response_Operation
-  */
-
 
 /**
  * @apidefine retrieveResult_request
@@ -57,6 +55,19 @@
  */
 
 /**
+ * @api {post} /poseidon/operation/ Create Operation
+ * @apiName CreateOperation
+ * @apiVersion 1.0.0
+ * @apiGroup Group_Operation
+ *
+ * @apiuse HeaderParameters
+ *
+ * @apiuse request_Operation
+ *
+ * @apiuse response_Operation
+ */
+
+/**
  * @api {get} /poseidon/operation/result?jsondata={...} Retrieve Game Result
  * @apiName RetrieveGameResult
  * @apiVersion 1.0.0
@@ -67,4 +78,18 @@
  * @apiuse retrieveResult_request
  *
  * @apiuse retrieveResult_response
+ */
+
+
+/**
+ * @api {post} /poseidon/operation/quitgame Quit Game
+ * @apiName QuitGame
+ * @apiVersion 1.0.0
+ * @apiGroup Group_Operation
+ *
+ * @apiuse HeaderParameters
+ *
+ * @apiuse quit_game_request
+ *
+ * @apiuse quit_game_response
  */

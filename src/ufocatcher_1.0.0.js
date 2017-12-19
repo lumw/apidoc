@@ -17,6 +17,11 @@
   * @apiSuccess {Number} ufocatcher.doll.dollId 娃娃ID
   * @apiSuccess {String} ufocatcher.doll.dollName 娃娃名称
   * @apiSuccess {String} ufocatcher.doll.dollImgUrl 娃娃图片url
+  * @apiSuccess {Object} ufocatcher.owner
+  * @apiSuccess {Number} ufocatcher.owner.userId 当前操作娃娃机玩家的userid
+  * @apiSuccess {String} ufocatcher.owner.wechatId 用户微信Id
+  * @apiSuccess {String} ufocatcher.owner.wechatkName 微信昵称
+  * @apiSuccess {String} ufocatcher.owner.wechatHeadImgUrl 微信头像
   *
   * @apiError {String} reasonCode
   */
@@ -36,6 +41,11 @@
  * @apiSuccess {Number} ufocatcher.doll.dollId 娃娃ID
  * @apiSuccess {String} ufocatcher.doll.dollName 娃娃名称
  * @apiSuccess {String} ufocatcher.doll.dollImgUrl 娃娃图片url
+ * @apiSuccess {Object} ufocatcher.owner
+ * @apiSuccess {Number} ufocatcher.owner.userId 当前操作娃娃机玩家的userid
+ * @apiSuccess {String} ufocatcher.owner.wechatId 用户微信Id
+ * @apiSuccess {String} ufocatcher.owner.wechatName 微信昵称
+ * @apiSuccess {String} ufocatcher.owner.wechatHeadImgUrl 微信头像
  *
  * @apiError {String} reasonCode
  */
