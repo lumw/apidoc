@@ -62,6 +62,9 @@
  * @apiSuccess {String} [user.province]
  * @apiSuccess {String} [user.city]
  * @apiSuccess {Number} user.recCreateAppro 用户创建方式 默认 1-微信
+ * @apiSuccess {Number} user.invitCode 邀请码
+ * @apiSuccess {Number} user.invitCodeUsedCount 邀请码使用次数
+ * @apiSuccess {Number} user.DollCountTotal 总计抓中娃娃次数
  * @apiSuccess {Object} account[]
  * @apiSuccess {Number} account.accountId
  * @apiSuccess {String} account.accountType 1-游戏币账户 2-积分账户
