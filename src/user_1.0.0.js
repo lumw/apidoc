@@ -141,19 +141,6 @@
  */
 
 
- /**
-  * @api {post} /poseidon/user/ Create User
-  * @apiName CreateUser
-  * @apiVersion 1.0.0
-  * @apiGroup Group_User
-  *
-  * @apiuse HeaderParameters
-  * @apiuse request_User
-  *
-  * @apiuse response_Create_User
-  */
-
-
   /**
    * @api {put} /poseidon/user/:userId Update User
    * @apiName UpdateUser
@@ -189,7 +176,7 @@
  * @apiuse HeaderParameters
  * @apiuse request_User_Login
  *
- * @apiuse response_Create_User
+ * @apiuse response_Retrieve_User
  */
 
 /**
