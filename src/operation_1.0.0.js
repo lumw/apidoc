@@ -5,7 +5,7 @@
 /**
  * @apidefine request_Operation
  * @apiparam {Object} operation
- * @apiParam {Number} operation.operationId 操作ID，发送开始游戏请求时该值可以为空
+ * @apiParam {String} operation.operationId 操作ID，发送开始游戏请求时该值可以为空
  * @apiParam {Number} operation.userId 用户ID
  * @apiParam {Number} operation.accountId 账户ID
  * @apiParam {String} operation.ufoCatcherId 娃娃机ID
