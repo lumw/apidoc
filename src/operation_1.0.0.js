@@ -5,9 +5,10 @@
 /**
  * @apidefine request_Operation
  * @apiparam {Object} operation
- * @apiParam {Number} operation.userId the unique identifer of a user
- * @apiParam {Number} operation.accountId the unique identifer of a user's account
- * @apiParam {String} operation.ufoCatcherId the unique identifer of a ufoCatcher
+ * @apiParam {Number} operation.operationId 操作ID，发送开始游戏请求时该值可以为空
+ * @apiParam {Number} operation.userId 用户ID
+ * @apiParam {Number} operation.accountId 账户ID
+ * @apiParam {String} operation.ufoCatcherId 娃娃机ID
  * @apiParam {String} operation.actionCode 开始游戏 0001, 向南移动 0002, 向北移动 0003, 向西移动 0004, 向东移动 0005, 抓取娃娃 0006
  * @apiParam {String} operation.create_dt_tm the operation create time
  */
