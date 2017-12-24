@@ -13,10 +13,12 @@
   * @apiSuccess {Number} ufocatcher.gameCurcny 娃娃机每局游戏消耗游戏币
   * @apiSuccess {String} ufocatcher.frontCameraUrl 正面摄像头直播地址
   * @apiSuccess {String} ufocatcher.lateralCameraUrl 侧面摄像头直播地址
+  * @apiSuccess {String} ufocatcher.chatGroupId 娃娃机对应的IM聊天群组ID
   * @apiSuccess {Object} ufocatcher.doll
   * @apiSuccess {Number} ufocatcher.doll.dollId 娃娃ID
   * @apiSuccess {String} ufocatcher.doll.dollName 娃娃名称
   * @apiSuccess {String} ufocatcher.doll.dollImgUrl 娃娃图片url
+  * @apiSuccess {String} ufocatcher.doll.dollDesc 娃娃描述
   * @apiSuccess {Object} ufocatcher.owner
   * @apiSuccess {Number} ufocatcher.owner.userId 当前操作娃娃机玩家的userid
   * @apiSuccess {String} ufocatcher.owner.wechatId 用户微信Id
@@ -37,10 +39,12 @@
  * @apiSuccess {Number} ufocatcher.gameCurcny 娃娃机每局游戏消耗游戏币
  * @apiSuccess {String} ufocatcher.frontCameraUrl 正面摄像头直播地址
  * @apiSuccess {String} ufocatcher.lateralCameraUrl 侧面摄像头直播地址
+ * @apiSuccess {String} ufocatcher.chatGroupId 娃娃机对应的IM聊天群组ID
  * @apiSuccess {Object} ufocatcher.doll
  * @apiSuccess {Number} ufocatcher.doll.dollId 娃娃ID
  * @apiSuccess {String} ufocatcher.doll.dollName 娃娃名称
  * @apiSuccess {String} ufocatcher.doll.dollImgUrl 娃娃图片url
+ * @apiSuccess {String} ufocatcher.doll.dollDesc 娃娃描述
  * @apiSuccess {Object} ufocatcher.owner
  * @apiSuccess {Number} ufocatcher.owner.userId 当前操作娃娃机玩家的userid
  * @apiSuccess {String} ufocatcher.owner.wechatId 用户微信Id
