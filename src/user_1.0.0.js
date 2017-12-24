@@ -123,6 +123,24 @@
  */
 
 /**
+ * @apidefine request_Pre_Payment
+ * @apiparam {Object} prePayment
+ * @apiParam {Number} prePayment.userId 用户ID
+ * @apiParam {Number} prePayment.accountId  账户ID
+ * @apiParam {String} prePayment.paymentType 充值类型  P_CURR:充值游戏币
+ * @apiParam {String} prePayment.paymentChannel 充值渠道 WechatPay:微信支付  AliPay:支付宝支付
+ * @apiParam {Number} prePayment.totalFee 充值总金额 单位:分
+ * @apiParam {Number} prePayment.comboId 充值对应的套餐ID
+ */
+
+/**
+ * @apidefine response_Pre_Payment
+ *
+ * @apiError {String} errorCode
+ */
+
+
+/**
  * @apidefine request_User_Exchange
  * @apiparam {Object} exchange
  * @apiParam {Number} exchange.userId 用户ID
@@ -216,4 +234,16 @@
  * @apiuse request_User_Exchange
  *
  * @apiuse response_User_Exchange
+ */
+
+/**
+ * @api {post} /poseidon/user/prepayment Pre Payment
+ * @apiName Pre Payment
+ * @apiVersion 1.0.0
+ * @apiGroup Group_User
+ *
+ * @apiuse HeaderParameters
+ * @apiuse request_Pre_Payment
+ *
+ * @apiuse response_Pre_Payment
  */
