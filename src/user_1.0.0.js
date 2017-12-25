@@ -127,6 +127,7 @@
  * @apiparam {Object} prePayment
  * @apiParam {Number} prePayment.userId 用户ID
  * @apiParam {Number} prePayment.accountId  账户ID
+ * @apiParam {String} prePayment.deviceIp  终端IP
  * @apiParam {String} prePayment.paymentType 充值类型  P_CURR:充值游戏币
  * @apiParam {String} prePayment.paymentChannel 充值渠道 WechatPay:微信支付  AliPay:支付宝支付
  * @apiParam {Number} prePayment.totalFee 充值总金额 单位:分
