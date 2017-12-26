@@ -17,3 +17,9 @@
  * @apiDefine UrlParameter_Jsondata
  * @apiParam (Url Parameter) {Json} jsonData the json format request data.
  */
+
+/**
+ * @apidefine response_erroeCode_only
+ *
+ * @apiError {String} errorCode
+ */
