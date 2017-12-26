@@ -139,7 +139,7 @@
  *
  * @apiSuccess {String} paymentChannel 充值渠道 WechatPay:微信支付  AliPay:支付宝支付
  * @apiSuccess {Object} wechatPrePaymentResp 微信充值时该节点有内容
- * @apiSuccess {Object} wechatPrePaymentResp.prePayId 预支付交易会话标识
+ * @apiSuccess {String} wechatPrePaymentResp.prePayId 预支付交易会话标识
  *
  * @apiError {String} errorCode
  */
