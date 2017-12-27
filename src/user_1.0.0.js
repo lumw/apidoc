@@ -166,6 +166,18 @@
  * @apiError {String} errorCode
  */
 
+/**
+ * @apidefine response_Retrieve_Doll_Wealth
+ * @apiSuccess {Number} dollTotlCount 抓住中的娃娃总数
+ * @apiSuccess {Object} dollWealth[]
+ * @apiSuccess {Number} dollWealth.dollId 娃娃编号
+ * @apiSuccess {String} dollWealth.dollName 娃娃名称
+ * @apiSuccess {String} dollWealth.dollImgUrl 娃娃图片url
+ * @apiSuccess {String} dollWealth.dollDesc 娃娃描述
+ * @apiSuccess {Number} dollWealth.dollCnt 娃娃个数
+ *
+ * @apiError {String} errorCode
+ */
 
   /**
    * @api {put} /poseidon/user/:userId Update User
@@ -251,4 +263,16 @@
  * @apiuse request_Pre_Payment
  *
  * @apiuse response_Pre_Payment
+ */
+
+
+/**
+ * @api {get} /poseidon/user/wealth/doll/:userId Retrieve User Doll Wealth
+ * @apiName Retrieve User Doll Wealth
+ * @apiVersion 1.0.0
+ * @apiGroup Group_User
+ *
+ * @apiuse HeaderParameters
+ *
+ * @apiuse response_Retrieve_Doll_Wealth
  */
