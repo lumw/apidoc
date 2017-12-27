@@ -78,6 +78,28 @@
  */
 
 
+/**
+ * @apidefine request_express_service
+ * @apiparam {Object} expressService
+ * @apiParam {Number} expressService.userId 用户ID
+ * @apiParam {String} expressService.type 邮寄类型  娃娃-Doll(目前默认传Doll)
+ * @apiParam {String} [expressService.companyName] 快递公司名称
+ * @apiParam {String} [expressService.fee] 快递费用
+ * @apiParam {Object[]} [expressService.doll] 当邮寄类型为Doll时，该节点必须有值
+ * @apiParam {Number} expressService.doll.dollId  娃娃编号
+ * @apiParam {String} expressService.doll.dollName 娃娃名称
+ * @apiParam {String} expressService.doll.dollImgUrl 娃娃图片
+ * @apiParam {Number} expressService.doll.quantity 娃娃个数
+ * @apiParam {Object} expressService.expressAddress 收货地址信息
+ * @apiParam {String} expressService.expressAddress.consigneeName 收货人姓名
+ * @apiParam {String} expressService.expressAddress.consigneeMobi 收货人手机号码
+ * @apiParam {String} [expressService.expressAddress.consigneeTel]  固定电话
+ * @apiParam {String} expressService.expressAddress.consigneeProv 省份
+ * @apiParam {String} expressService.expressAddress.consigneeCity 城市
+ * @apiParam {String} expressService.expressAddress.consigneeDist 区
+ * @apiParam {String} expressService.expressAddress.consigneeAddr 详细地址
+ * @apiParam {String} [expressService.expressAddress.consigneePostCde] 邮政编码
+ */
 
 
 /**
@@ -127,6 +149,20 @@
  * @apiuse HeaderParameters
  *
  * @apiuse request_delete_express_address
+ *
+ * @apiuse response_erroeCode_only
+ */
+
+
+/**
+ * @api {post} /poseidon/express Express Service
+ * @apiName ExpressService
+ * @apiVersion 1.0.0
+ * @apiGroup Group_Express
+ *
+ * @apiuse HeaderParameters
+ *
+ * @apiuse request_express_service
  *
  * @apiuse response_erroeCode_only
  */
