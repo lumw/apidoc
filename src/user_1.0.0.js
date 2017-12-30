@@ -286,7 +286,6 @@
  * @apiGroup Group_User
  *
  * @apiuse HeaderParameters
- * @apiuse request_Pre_Payment
  *
  * @apiuse response_Retrieve_Payment_Result
  */
