@@ -78,6 +78,19 @@
  * @apiError {String} errorCode
  */
 
+
+/**
+ * @apidefine response_Retrieve_Payment_Result
+ * @apiSuccess {Object} account[]
+ * @apiSuccess {Number} account.accountId
+ * @apiSuccess {String} account.accountType 1-游戏币账户 2-积分账户
+ * @apiSuccess {String} account.userId
+ * @apiSuccess {Number} account.balance
+ * @apiSuccess {Number} account.status
+ *
+ * @apiError {String} errorCode
+ */
+
 /**
  * @apidefine response_Retrieve_User_Score_Record
  * @apiSuccess {Number} currScore 当前积分值
@@ -263,6 +276,19 @@
  * @apiuse request_Pre_Payment
  *
  * @apiuse response_Pre_Payment
+ */
+
+
+/**
+ * @api {get} /poseidon/user/prepayment/result/:outTradeNo Retrieve Payment Result
+ * @apiName Retrieve Payment Result
+ * @apiVersion 1.0.0
+ * @apiGroup Group_User
+ *
+ * @apiuse HeaderParameters
+ * @apiuse request_Pre_Payment
+ *
+ * @apiuse response_Retrieve_Payment_Result
  */
 
 
