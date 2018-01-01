@@ -68,6 +68,7 @@
  * @apiSuccess {Number} user.userLevel 用户等级
  * @apiSuccess {Number} user.imPrivateKey 用户使用im聊天的私钥
  * @apiSuccess {Number} user.imPrivateKeyExpireDtTm 用户当前私钥过期时间
+ * @apiSuccess {Number} user.userStatus 用户状态  0-无效 1-有效
  * @apiSuccess {Object} account[]
  * @apiSuccess {Number} account.accountId
  * @apiSuccess {String} account.accountType 1-游戏币账户 2-积分账户
