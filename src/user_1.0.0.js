@@ -169,6 +169,12 @@
  */
 
 /**
+ * @apidefine request_User_SignIn
+ * @apiparam {Object} userSignIn
+ * @apiParam {Number} userSignIn.userId 用户ID
+ */
+
+/**
  * @apidefine response_User_Exchange
  * @apiSuccess {Object} account[]
  * @apiSuccess {Number} account.accountId 账户ID
@@ -301,4 +307,17 @@
  * @apiuse HeaderParameters
  *
  * @apiuse response_Retrieve_Doll_Wealth
+ */
+
+
+/**
+ * @api {post} /poseidon/user/signin User SignIn
+ * @apiName User SignIn
+ * @apiVersion 1.0.0
+ * @apiGroup Group_User
+ *
+ * @apiuse HeaderParameters
+ * @apiuse request_User_SignIn
+ *
+ * @apiuse response_erroeCode_only
  */
