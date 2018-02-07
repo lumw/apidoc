@@ -196,6 +196,7 @@
  * @apiSuccess {String} dollWealth.dollImgUrl 娃娃图片url
  * @apiSuccess {String} dollWealth.dollDesc 娃娃描述
  * @apiSuccess {Number} dollWealth.dollCnt 娃娃个数
+ * @apiSuccess {String} dollWealth.recCreateDtTm 抓中娃娃时间
  *
  * @apiError {String} errorCode
  */

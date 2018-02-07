@@ -90,6 +90,7 @@
  * @apiParam {String} expressService.doll.dollName 娃娃名称
  * @apiParam {String} expressService.doll.dollImgUrl 娃娃图片
  * @apiParam {Number} expressService.doll.quantity 娃娃个数
+ * @apiParam {String} expressService.doll.recCreateDtTm 抓中娃娃时间
  * @apiParam {Object} expressService.expressAddress 收货地址信息
  * @apiParam {String} expressService.expressAddress.consigneeName 收货人姓名
  * @apiParam {String} expressService.expressAddress.consigneeMobi 收货人手机号码
